@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Conexión ESP32"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/tvLabelIp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dirección IP:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitulo"
+        android:layout_marginTop="48dp" />
+
+    <EditText
+        android:id="@+id/etIp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="192.168.1.100"
+        android:inputType="text"
+        android:text="192.168.1.100"
+        android:padding="16dp"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelIp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tvLabelPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puerto (opcional):"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etIp"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etPort"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="80"
+        android:inputType="number"
+        android:text="80"
+        android:padding="16dp"
+        android:background="@android:drawable/edit_text"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelPort"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnConectar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Establecer Conexión"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPort"
+        android:layout_marginTop="32dp"
+        android:padding="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
